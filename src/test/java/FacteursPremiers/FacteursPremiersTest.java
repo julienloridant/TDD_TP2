@@ -24,4 +24,22 @@ class FacteursPremiersTest {
 
     }
 
+    @Test
+    void devrait_retourner_un_Set_compose_de_2() {
+
+        //GIVEN
+        int nb = 2;
+
+        //WHEN
+        Set<Integer> ArrayTest = FacteursPremiers.generate(2);
+
+        //THEN
+        assertThat(ArrayTest).containsExactlyInAnyOrder(2);
+
+
+    }
+
+
+
+
 }
