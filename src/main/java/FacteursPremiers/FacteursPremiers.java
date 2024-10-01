@@ -3,12 +3,13 @@ package FacteursPremiers;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class FacteursPremiers {
-    static Set<Integer> generate(int nb) {
+    static List<Integer> generate(int nb) {
         if (nb > 0) {
-            HashSet<Integer> listFP = new HashSet<Integer>();
+            List<Integer> listFP = new ArrayList<Integer>();
 
             // Diviser le nombre par 2 tant qu'il est pair
             while (nb % 2 == 0) {

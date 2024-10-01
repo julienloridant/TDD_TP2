@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import static FacteursPremiers.FacteursPremiers.generate;
 import static org.assertj.core.api.Assertions.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,7 +17,7 @@ class FacteursPremiersTest {
         int nb = 1;
 
         //WHEN
-        Set<Integer> ArrayTest = FacteursPremiers.generate(1);
+        List<Integer> ArrayTest = FacteursPremiers.generate(1);
 
         //THEN
         assertThat(ArrayTest).containsExactlyInAnyOrder();
@@ -31,7 +32,7 @@ class FacteursPremiersTest {
         int nb = 2;
 
         //WHEN
-        Set<Integer> ArrayTest = FacteursPremiers.generate(2);
+        List<Integer> ArrayTest = FacteursPremiers.generate(2);
 
         //THEN
         assertThat(ArrayTest).containsExactlyInAnyOrder(2);
@@ -46,10 +47,25 @@ class FacteursPremiersTest {
         int nb = 2;
 
         //WHEN
-        Set<Integer> ArrayTest = FacteursPremiers.generate(3);
+        List<Integer> ArrayTest = FacteursPremiers.generate(3);
 
         //THEN
         assertThat(ArrayTest).containsExactlyInAnyOrder(3);
+
+
+    }
+
+    @Test
+    void devrait_retourner_un_Set_compose_de_2_2() {
+
+        //GIVEN
+        int nb = 2;
+
+        //WHEN
+        List<Integer> ArrayTest = FacteursPremiers.generate(4);
+
+        //THEN
+        assertThat(ArrayTest).containsExactlyInAnyOrder(2,2);
 
 
     }
